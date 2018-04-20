@@ -2,19 +2,514 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
 tfoot, thead, tr, th, td ,textarea,input { margin:0; padding:0;  }
 address,cite,dfn,em,var, i {font-style:normal;}
-body {font-size: 16px; line-height: 1.5; font-family:'Microsoft Yahei','simsun','arial','tahoma';  color: #222; background: #eee; }
-table { border-collapse:collapse; border-spacing:0; }
+body {font: 12px "Microsoft YaHei","微软雅黑","宋体",Arial,Helvetica,sans-serif;text-align: left;background-color: #fff; color: #333; margin: 0;box-sizing:border-box; } table { border-collapse:collapse; border-spacing:0; }
 h1, h2, h3, h4, h5, h6, th { font-size: 100%; font-weight: normal; }
 button,input,select,textarea{font-size:100%;}
 fieldset,img{border:0;}
-a { text-decoration: none; color: #666; background: none }
+a{text-decoration: none; color: #ccc;cursor: pointer;outline: 0;}
 ul, ol { list-style: none; }
 
-.g_left{
+.g-left{
 	float:left;
 }
-.g_right{
+.g-right{
 	float: right;
 }
+
+.g-color{
+	color: #ccc;
+}
+
+.g_wrap{
+	margin:0 auto;
+	width: 1080px;
+}
+
+/*公共样式结束*/
+
+.wrap{
+	width: 100%;
+	background: #f9f9f9;
+}
+
+
+/*导航样式*/
+.nav_wrap{
+	width: 100%;
+	background: #333333;
+	.nav{
+		
+		height: 30px;
+	   
+	    b{
+			width:1px;
+			height: 11px;
+			background: white;	
+			margin: 0 18px;	
+			display: inline-block;
+			}
+    	.nav_index,.nav_user{
+			line-height: 30px;
+    		a{
+    			color: #ccc;
+    		}
+    		a:hover{
+    			color:white;
+    		}
+	    	
+    	} 
+    	.nav_user{
+			li{
+				display: inline-block;
+			}
+			li:first-child a:first-child{
+				margin: 0 18px;
+			}
+			li:nth-child(3){
+				padding-left:20px;
+				background: url(http://static.biyao.com/pc/common/img/master/msgcenter.png?v=biyao_7dcad45) no-repeat 2px 9px;
+				a{
+					margin: 0 11px;
+				}
+			}
+			li:nth-child(4){
+				margin-right: 20px;
+				position: relative;
+				
+
+				span{
+					color: #ccc;
+					display: inline-block;
+					width: 9px;
+					height: 4px;
+					margin-left: 10px;
+					vertical-align: middle;
+					background: url(http://static1.biyao.com/pc/common/img/master/comSprite.png?v=biyao_d192a16) 0 -102px no-repeat
+				}
+				.myService{
+					
+					background: white;
+					min-width: 124px;
+					position: absolute;
+					top: 38px;
+					left: 29px;
+					border-radius: 4px;
+					box-shadow: 0 1px 10px 4px rgba(0,0,0,.05);
+					display: none;
+					i{
+						position: absolute;
+						top: -15;
+						left: 37%;
+					    z-index: 1;
+					    display: block;
+					    width: 30px;
+					    height: 15px;
+					    margin: 0 auto;
+					    background: url(http://static3.biyao.com/pc/common/img/master/triangle.png?v=biyao_5912cd0) no-repeat;
+					    background-size: 100% 100%;
+					}
+					a{
+					    display: block;
+					    height: 40px;
+					    padding: 0 30px;
+					    line-height: 40px;
+					    font-size: 16px;
+					    color: #333;
+					    box-sizing: border-box;
+					}
+				}
+
+
+
+			}
+			li:last-child{
+				width: 110px;
+				height:30px;
+				background: #523669;
+
+				a{
+					display: inline-block;
+					width: 85px;
+					height: 30px;
+					padding-left: 25px;
+					text-align: center;
+					line-height: 30px;
+					background: #523669 url(http://static2.biyao.com/pc/common/img/master/shopCar.png?v=biyao_450e7fc) no-repeat 15px 7px;
+				}
+			}
+    	}
+	}
+}
+
+
+/*头部样式*/
+.header-wrap{
+	background: white;
+	box-shadow: 0 2px 4px rgba(0,0,0,.05) ;
+}
+.header{
+	
+	.header_logo{
+
+		height: 75px;
+		padding-top: 25px;
+		h1{
+			margin: 0;
+			width: 240px;
+			height: 54px;
+			img{
+				position: absolute;
+			}
+			span{
+				color: white;
+			}
+		}
+		.header_search{
+			margin-top: 5px;
+			p{
+				float: left;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+
+				#searchInput{
+					float: left;
+					width: 490px;
+					line-height: 38px;
+					border: 0;
+					border-radius: 3px;
+					padding-left: 10px;
+					font-size: 16px;
+					color: 33px;
+					line-height: 40px;		
+				}
+				#sreachSpan{
+				    display: inline-block;
+				    width: 39px;
+				    height: 38px;
+				    border-left: 1px solid #ccc;
+				    vertical-align: middle;
+				    background: url(http://static2.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat;
+				    cursor: pointer;
+			
+				}
+
+			}
+			/*sreach下面辅助搜索*/
+			ul li{
+				float:left;
+				width: 40px;
+				line-height: 25px;
+				a{
+					font-size: 11px;
+				color: gray;
+				}
+				a:hover{
+					color:orange;
+				}
+			}
+			
+		}
+	}
+	/*头部列表*/
+	.header_tab{
+		height: 40px;
+		span{
+			display: inline-block;
+			width: 180px;
+			line-height: 40px;
+			background: #f9f9f9;
+			padding-left: 20px;
+			color: #333;
+			font-size: 16px;
+			i{
+				width: 16px;
+				height: 16px;
+				display: inline-block;
+				vertical-align: middle;
+				background: url(http://static3.biyao.com/pc/common/img/master/nav-list.png?v=biyao_a50ea2d) no-repeat;
+				margin-right: 10px;
+			}
+		}
+		a{
+			display: inline-block;
+			text-align: center;	
+			width: 125px;
+			color: #333;
+			font-size: 16px;
+			border-right: 1px solid #ccc;
+		}
+		a:last-child{
+			border: 0;
+		}
+		a:hover{
+			color: orange;
+		}
+
+	}
+}
+/*头部结束*/
+
+
+
+/*main开始*/
+.main{
+
+	
+	margin:10px auto 0;
+	overflow: hidden;
+	/*菜单*/
+	.menu{
+		float: left;
+		padding: 20px 0;
+		background: #4e4c52;
+		ul{
+			li{
+				width: 170px;
+				display: block;
+				line-height: 40px;
+				padding-left: 30px;
+				font-size: 14px;
+				a{
+					color: white;
+				}
+				b{
+					color:white;
+					margin: 0 8px;
+				}
+			}
+			li:hover{
+				background: #f2f2f2;
+			}
+		}
+	}
+	/*轮播图*/
+	.banner{
+		float: left;
+		width: 880px;
+		height: 360px;
+		img{
+			width: 880px;
+			height: 360px;
+		}
+
+	}
+	.new{
+		
+		background: white;
+		
+		clear: both;
+		float: left;
+		img{
+			width: 80px;
+			height: 21px;
+			vertical-align: middle;
+			margin: 18px 58px;
+		}
+		a{
+			   
+			    
+			    font-size: 16px;
+			    color: #333;
+			    background: #fff;
+				font-weight: 200;
+			span{
+				height: 21px;
+			    padding-left: 21px;
+			    border-left: 1px solid #ccc;
+			}
+			i{
+				float: right;
+				display: inline-block;
+				line-height: 56px;
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+/*热销商品*/
+.hot{
+	
+	padding-top: 40px;
+	img{
+		width: 350px;
+		height: 220px;
+		cursor: pointer;
+		/*box-shadow:0;*/
+		transition: all 0.5s  ease;
+	}
+	img:hover{
+		box-shadow: 0 0 5px 5px #cccccc;
+		
+	}
+	img:nth-child(2){
+		margin:0 11px;
+	}
+
+}
+
+/*精选商品*/
+.select{
+	
+	padding-top:42px;
+	.select_title{
+		height: 44px;
+		span{
+			line-height: 24px;	
+			font-size: 24px;
+			color: black;
+		}
+	}
+}
+
+/*商品列表开始*/
+.list{
+	.tem{
+		padding-top:42px;
+		.tem_title{
+			height: 44px;
+			span{
+				font-size: 24px;
+				color: black;
+			}
+		}
+		/*列表内容*/
+		.tem_content{
+			li>a{
+				width:205px;
+				height:285px;
+				display: block;
+				background: white;
+				img{
+					height: 204px;
+					width: 204px;
+				}
+				dl{
+					width: 204px;
+					height: 60px;
+					margin-top: 20px;
+					dt{
+						color: #333;
+					    font-size: 16px;
+					    text-align: center;
+					}
+					dd{
+						margin-top: 5px;
+					    color: #f33;
+					    font-size: 16px;
+					    text-align: center;
+					}
+				}
+				p{
+					display: block;
+				    margin-top: 24px;
+				    font-size: 20px;
+				    color: #333;
+				}  
+			}
+			li:first-child>a{
+				width:425px;
+				height:285px;
+				display: block;
+				background: white;
+				img{
+					height: 204px;
+					width: 425px;
+				}
+				p{
+					height: 80px;
+					margin-top: 24px;
+				    font-size: 20px;
+				    color: #333;
+				    text-align: center;
+				}
+				
+			    
+			}
+		}
+	}
+}
+/*商品列表结束*/
+
+
+/*footer开始
+*/
+.footer_wrap{
+	background: white;
+}
+.footer{
+	.service{
+		ul>li{
+			width: 270px;
+			line-height: 120px;
+			float:left;
+			padding-left: 50px;
+			box-sizing: border-box;
+			img{
+				vertical-align: middle;
+			}
+			span{
+				margin-left: 25px;
+				font-size: 14px;
+				color: #333;
+
+			}
+		}
+	}
+	.footer_main{
+		
+		padding-top: 40px;
+			padding-left: 50px;
+			overflow: hidden;
+		div{
+			float: left;
+			margin-right: 120px;
+			
+			p{
+				font-size: 16px;
+				color: black;
+				margin-bottom: 35px;
+			}
+			span{
+				display: block;
+				margin-bottom: 15px;
+				color:#808080;
+			}
+			img{
+				margin-top: -15px;
+				width: 100px;
+				height: 100px;
+			}
+
+		}
+
+		div:last-child{
+			text-align: center;
+			width: 225px;
+			margin:0;
+			height: 142px;
+			border-left: 2px solid #f2f2f2;
+		}
+	}
+	.copyright{
+		text-align: center;
+		padding-top: 65px;
+		p{
+			margin-bottom: 10px;
+			color:#808080;
+			span{
+				margin:0 12px;
+			}
+			
+		}
+	}
+
+}
+
+
+
+
+
+
 
 
