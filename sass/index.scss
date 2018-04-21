@@ -24,6 +24,9 @@ ul, ol { list-style: none; }
 	margin:0 auto;
 	width: 1080px;
 }
+.g_orange{
+		background: orange !important;
+		}
 
 /*公共样式结束*/
 
@@ -276,22 +279,57 @@ ul, ol { list-style: none; }
 					color:white;
 					margin: 0 8px;
 				}
+				a:hover{
+					color: orange;
+				}
 			}
-			li:hover{
-				background: #f2f2f2;
-			}
+			
 		}
+
 	}
 	/*轮播图*/
 	.banner{
 		float: left;
 		width: 880px;
 		height: 360px;
-		img{
-			width: 880px;
-			height: 360px;
-		}
+		overflow: hidden;
+		position: relative;
+		ul{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			
+			li{
+				float: left;
+				img{
+					width: 880px;
+					height: 360px;
+				}
+			}
 
+		}
+		.pages{
+			position: absolute;
+			bottom: 0;
+			background: black;
+			height: 30px;
+			width: 880px;
+
+			
+			i{
+				width: 10px;
+				height: 10px;
+				border-radius: 250px;
+				background: white;
+				float: left;
+				position: relative;
+				top: 33%;
+				left: 41%;
+				margin:0 3px;
+				
+			}
+			
+		}
 	}
 	.new{
 		
@@ -336,7 +374,7 @@ ul, ol { list-style: none; }
 		height: 220px;
 		cursor: pointer;
 		/*box-shadow:0;*/
-		transition: all 0.5s  ease;
+		transition: all 1s  ease;
 	}
 	img:hover{
 		box-shadow: 0 0 5px 5px #cccccc;
@@ -371,12 +409,32 @@ ul, ol { list-style: none; }
 			span{
 				font-size: 24px;
 				color: black;
+				float: left;
+			}
+			a{
+				float: right;
+			    color: #333;
+			    font-size: 16px;
+
 			}
 		}
 		/*列表内容*/
 		.tem_content{
+			/*overflow: hidden;*/
+			width: 1095px;
+			
+			li:hover{
+				box-shadow: 0 0 5px 5px #cccccc;
+			}
+			li{
+				width:204px;
+				float: left;
+				margin-right: 15px;
+				margin-bottom: 15px;
+				transition: all 1s  ease;
+			}
 			li>a{
-				width:205px;
+				width:204px;
 				height:285px;
 				display: block;
 				background: white;
@@ -407,24 +465,25 @@ ul, ol { list-style: none; }
 				    color: #333;
 				}  
 			}
-			li:first-child>a{
-				width:425px;
-				height:285px;
-				display: block;
-				background: white;
-				img{
-					height: 204px;
-					width: 425px;
+			li:first-child{
+				width: 423px;
+				a{
+					width:423px;
+					height:285px;
+					display: block;
+					background: white;
+					img{
+						height: 204px;
+						width: 423px;
+					}
+					p{
+						height: 80px;
+						margin-top: 24px;
+					    font-size: 20px;
+					    color: #333;
+					    text-align: center;
+					}
 				}
-				p{
-					height: 80px;
-					margin-top: 24px;
-				    font-size: 20px;
-				    color: #333;
-				    text-align: center;
-				}
-				
-			    
 			}
 		}
 	}
@@ -504,6 +563,65 @@ ul, ol { list-style: none; }
 		}
 	}
 
+}
+
+
+
+
+
+
+
+/*手风琴样式*/
+.accordion {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+ 
+.accordion:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+ 
+.accordion._create:after { display: none; }
+ 
+.accordion__ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 9999px;
+  height: 300px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+ 
+.accordion__li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #000;
+  transition: all 0.3s ease-out;
+}
+.accordion__li:first-child{
+	width: 620px;
+}
+ 
+.accordion__img {
+  display: block;
+  cursor: pointer;
 }
 
 

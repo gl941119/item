@@ -52,6 +52,9 @@ ul, ol {
   margin: 0 auto;
   width: 1080px; }
 
+.g_orange {
+  background: orange !important; }
+
 /*公共样式结束*/
 .wrap {
   width: 100%;
@@ -239,15 +242,39 @@ ul, ol {
       .main .menu ul li b {
         color: white;
         margin: 0 8px; }
-    .main .menu ul li:hover {
-      background: #f2f2f2; }
+      .main .menu ul li a:hover {
+        color: orange; }
   .main .banner {
     float: left;
     width: 880px;
-    height: 360px; }
-    .main .banner img {
-      width: 880px;
-      height: 360px; }
+    height: 360px;
+    overflow: hidden;
+    position: relative; }
+    .main .banner ul {
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+      .main .banner ul li {
+        float: left; }
+        .main .banner ul li img {
+          width: 880px;
+          height: 360px; }
+    .main .banner .pages {
+      position: absolute;
+      bottom: 0;
+      background: black;
+      height: 30px;
+      width: 880px; }
+      .main .banner .pages i {
+        width: 10px;
+        height: 10px;
+        border-radius: 250px;
+        background: white;
+        float: left;
+        position: relative;
+        top: 33%;
+        left: 41%;
+        margin: 0 3px; }
   .main .new {
     background: white;
     clear: both;
@@ -280,7 +307,7 @@ ul, ol {
     height: 220px;
     cursor: pointer;
     /*box-shadow:0;*/
-    transition: all 0.5s  ease; }
+    transition: all 1s  ease; }
   .hot img:hover {
     box-shadow: 0 0 5px 5px #cccccc; }
   .hot img:nth-child(2) {
@@ -304,47 +331,65 @@ ul, ol {
     height: 44px; }
     .list .tem .tem_title span {
       font-size: 24px;
-      color: black; }
-  .list .tem .tem_content li > a {
-    width: 205px;
-    height: 285px;
-    display: block;
-    background: white; }
-    .list .tem .tem_content li > a img {
-      height: 204px;
-      width: 204px; }
-    .list .tem .tem_content li > a dl {
-      width: 204px;
-      height: 60px;
-      margin-top: 20px; }
-      .list .tem .tem_content li > a dl dt {
-        color: #333;
-        font-size: 16px;
-        text-align: center; }
-      .list .tem .tem_content li > a dl dd {
-        margin-top: 5px;
-        color: #f33;
-        font-size: 16px;
-        text-align: center; }
-    .list .tem .tem_content li > a p {
-      display: block;
-      margin-top: 24px;
-      font-size: 20px;
-      color: #333; }
-  .list .tem .tem_content li:first-child > a {
-    width: 425px;
-    height: 285px;
-    display: block;
-    background: white; }
-    .list .tem .tem_content li:first-child > a img {
-      height: 204px;
-      width: 425px; }
-    .list .tem .tem_content li:first-child > a p {
-      height: 80px;
-      margin-top: 24px;
-      font-size: 20px;
+      color: black;
+      float: left; }
+    .list .tem .tem_title a {
+      float: right;
       color: #333;
-      text-align: center; }
+      font-size: 16px; }
+  .list .tem .tem_content {
+    /*overflow: hidden;*/
+    width: 1095px; }
+    .list .tem .tem_content li:hover {
+      box-shadow: 0 0 5px 5px #cccccc; }
+    .list .tem .tem_content li {
+      width: 204px;
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      transition: all 1s  ease; }
+    .list .tem .tem_content li > a {
+      width: 204px;
+      height: 285px;
+      display: block;
+      background: white; }
+      .list .tem .tem_content li > a img {
+        height: 204px;
+        width: 204px; }
+      .list .tem .tem_content li > a dl {
+        width: 204px;
+        height: 60px;
+        margin-top: 20px; }
+        .list .tem .tem_content li > a dl dt {
+          color: #333;
+          font-size: 16px;
+          text-align: center; }
+        .list .tem .tem_content li > a dl dd {
+          margin-top: 5px;
+          color: #f33;
+          font-size: 16px;
+          text-align: center; }
+      .list .tem .tem_content li > a p {
+        display: block;
+        margin-top: 24px;
+        font-size: 20px;
+        color: #333; }
+    .list .tem .tem_content li:first-child {
+      width: 423px; }
+      .list .tem .tem_content li:first-child a {
+        width: 423px;
+        height: 285px;
+        display: block;
+        background: white; }
+        .list .tem .tem_content li:first-child a img {
+          height: 204px;
+          width: 423px; }
+        .list .tem .tem_content li:first-child a p {
+          height: 80px;
+          margin-top: 24px;
+          font-size: 20px;
+          color: #333;
+          text-align: center; }
 
 /*商品列表结束*/
 /*footer开始
@@ -397,5 +442,54 @@ ul, ol {
     color: #808080; }
     .footer .copyright p span {
       margin: 0 12px; }
+
+/*手风琴样式*/
+.accordion {
+  height: 300px;
+  overflow: hidden;
+  position: relative; }
+
+.accordion:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff; }
+
+.accordion._create:after {
+  display: none; }
+
+.accordion__ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 9999px;
+  height: 300px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.accordion__li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #000;
+  transition: all 0.3s ease-out; }
+
+.accordion__li:first-child {
+  width: 620px; }
+
+.accordion__img {
+  display: block;
+  cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */
