@@ -79,10 +79,17 @@ $(function(){
 	var templateData = {
     
     list: [
+    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
+    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
+    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
+    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
     {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"}
-
     ]
 	};
+
+
+
+
 	var q = template('tem_big', templateData);
 	$(".list").html(q);
 
@@ -110,4 +117,15 @@ $(function(){
 
 
 
+	// 吸顶
+	$(window).scroll(function(e) {
+		let srcoll = document.documentElement.scrollTop
+		if(srcoll >613){
+			$(".header").removeClass('header').addClass('ceil')
+		}
+		if(srcoll<613){
+			$(".ceil").removeClass('ceil').addClass('header')
+		}
+		
+	});
 })
