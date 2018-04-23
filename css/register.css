@@ -1,0 +1,154 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, textarea, input {
+  margin: 0;
+  padding: 0; }
+
+address, cite, dfn, em, var, i {
+  font-style: normal; }
+
+body {
+  font: 12px "Microsoft YaHei","微软雅黑","宋体",Arial,Helvetica,sans-serif;
+  text-align: left;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  box-sizing: border-box; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6, th {
+  font-size: 100%;
+  font-weight: normal; }
+
+button, input, select, textarea {
+  font-size: 100%; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none;
+  color: #ccc;
+  cursor: pointer;
+  outline: 0; }
+
+ul, ol {
+  list-style: none; }
+
+.g-left {
+  float: left; }
+
+.g-right {
+  float: right; }
+
+.g-color {
+  color: #ccc; }
+
+.g_wrap {
+  margin: 0 auto;
+  width: 1080px; }
+
+.g_orange {
+  background: orange !important; }
+
+/*公共样式结束*/
+.wrap {
+  width: 100%;
+  background: white; }
+
+header {
+  width: 1190px;
+  height: 100px;
+  margin: 0 auto; }
+  header .logo {
+    line-height: 100px; }
+  header p {
+    color: #8c8292;
+    line-height: 100px; }
+    header p a {
+      width: 27px;
+      display: inline-block;
+      color: #8c8292; }
+    header p i {
+      display: inline-block;
+      width: 1px;
+      height: 13px;
+      background: #8c8292;
+      vertical-align: middle; }
+
+.main {
+  height: 666px;
+  background: #f9f9f9;
+  padding-top: 25px; }
+  .main #form-horizontal {
+    width: 400px;
+    margin: 0 auto;
+    /*div{
+    	height: 40px;
+    	margin: 10px auto;
+    }*/ }
+    .main #form-horizontal .form_title {
+      height: 40px; }
+      .main #form-horizontal .form_title i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background: url(../img/jinling.png) no-repeat;
+        background-position: 0 -521px; }
+      .main #form-horizontal .form_title span {
+        font-size: 20px;
+        color: #523669;
+        position: relative;
+        top: 2px; }
+    .main #form-horizontal .form-group {
+      /*div:last-child{
+      	background: red;
+      }*/ }
+      .main #form-horizontal .form-group div {
+        margin: 20px auto;
+        overflow: hidden;
+        /*line-height: 40px;*/ }
+        .main #form-horizontal .form-group div input {
+          width: 400px;
+          height: 40px;
+          padding-left: 20px; }
+      .main #form-horizontal .form-group #iphoneCode {
+        width: 240px;
+        float: left; }
+      .main #form-horizontal .form-group #iphoneBtn {
+        float: right;
+        width: 140px;
+        height: 40px;
+        background: #724a88;
+        /*outline: none;*/
+        border: 0; }
+      .main #form-horizontal .form-group #checkbox {
+        vertical-align: middle;
+        width: 15px;
+        height: 15px; }
+      .main #form-horizontal .form-group p {
+        display: inline-block; }
+        .main #form-horizontal .form-group p label {
+          position: relative;
+          top: 3px; }
+      .main #form-horizontal .form-group a {
+        position: relative;
+        left: 30px;
+        top: 3px;
+        color: #07a6df; }
+      .main #form-horizontal .form-group #btn {
+        width: 400px;
+        height: 50px;
+        border: 0;
+        outline: none;
+        background: #f49f26;
+        color: white;
+        font-size: 20px; }
+
+/*# sourceMappingURL=register.css.map */
