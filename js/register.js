@@ -2,10 +2,8 @@
 
 $(function(){
 
-	// 加入尾部
+	$("header").load("../html/include/header.html");
 	$("footer").load("../html/include/footer.html");
-
-	
 
 
 	let isSuccess = new Array(3);
@@ -63,42 +61,29 @@ $(function(){
 
 
 
-
 	// 点击注册的一些事件
 	$("#form-horizontal").submit(function(e) {
 
-		e.preventDefault();
-		if(!$("#iphone").val()){
+	
+		// e.preventDefault();
+		let	iphone =   $("#iphone").val()
+		if(!iphone){
 			$("#iphone").css({border:"1px solid red"}).next().text("请输入手机号")
 		}
 		if(!$("#password").val()){
 			$("#password").css({border:"1px solid red"}).next().text("请输入密码")
 		}
 		let isCheckbox = $("#checkbox").prop("checked")
-		let _isSuccess = isSuccess.every(function(a){
+		let _isSuccess = isSuccess.everyx(function(a){
 							return a == true;   
 							})
 		if(!isCheckbox || !_isSuccess){
 				return false;
 			}
-		// $.ajax({
-		// 	url: '/path/to/file',
-		// 	type: 'default GET (Other values: POST)',
-		// 	dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-		// 	data: {param1: 'value1'},
-		// })
-		// .done(function() {
-		// 	console.log("success");
-		// })
-		// .fail(function() {
-		// 	console.log("error");
-		// })
-		// .always(function() {
-		// 	console.log("complete");
-		// });
+
+
 		
-
-
+	
 	});
 
 

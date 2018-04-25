@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>登录</title>
+
+    
+    <link rel="stylesheet" href="../css/headerAndFooter.css">
+    <link rel="stylesheet" href="../css/login.css">
+  </head>
+  <body>
+    <div class="wrap">
+    	<header></header>
+    	<div class="main">
+			<form  id="form-horizontal" >
+				<div class="textLogin">
+					<div class="form_title">
+						<div class="g-left">
+							<i></i>
+							<span>用户登录</span>	
+						</div>
+						<div class="g-right">
+							<a href="javascript:void(0)">短信登录</a>
+							<a href="javascript:void(0)">密码登录</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<div>
+							<input type="text" id="iphone" placeholder="请输入手机号">
+							<span></span>
+						</div>
+						
+						<div>
+							<input type="text" placeholder="请输入短信验证码" id="iphoneCode">
+							<button id="iphoneBtn" class=" btn-primary">获取验证码</button>
+							<span></span>
+						</div>
+						<button id="btn">注册</button>
+					</div>
+				</div>
+				<div class="passwordLogin"  style="display: none;">
+					<div class="form_title">
+						<div class="g-left">
+							<i></i>
+							<span>用户登录</span>	
+						</div>
+						<div class="g-right">
+							<a href="javascript:void(0)">短信登录</a>
+							<a href="javascript:void(0)">密码登录</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<div>
+							<input type="text" id="iphone" placeholder="请输入手机号">
+							<span></span>
+						</div>
+						
+						 <div>
+							<input type="text" id="password"
+							placeholder="请输入6-32位登录密码">
+							<span></span>
+						</div>
+	
+						<div class="againAutoLogin_box">
+							<p class="g-left">
+								<input type="checkbox" id="againAutoLogin">
+								<label for="againAutoLogin">下次自动登录</label>
+							</p>
+							<p class="g-right">
+								<a>忘记密码</a>
+							</p>
+						</div> 
+						
+						<button id="btn">注册</button>
+
+					</div>
+				</div>
+			</form>
+    	</div>
+    	<footer></footer>
+    </div>
+
+
+
+
+
+
+
+    <script src="/lib/jquery/jquery-3.3.1.js"></script>
+    
+    <script src="/js/login.js"></script>
+    
+  </body>
+</html>

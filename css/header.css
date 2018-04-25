@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*复用头部样式*/
+header {
+  width: 1190px;
+  height: 100px;
+  margin: 0 auto; }
+  header .logo {
+    line-height: 100px; }
+  header p {
+    color: #8c8292;
+    line-height: 100px; }
+    header p a {
+      width: 27px;
+      display: inline-block;
+      color: #8c8292; }
+    header p i {
+      display: inline-block;
+      width: 1px;
+      height: 13px;
+      background: #8c8292;
+      vertical-align: middle; }
+
+尾部样式-- >
+.footer .service ul > li {
+  width: 270px;
+  line-height: 120px;
+  float: left;
+  padding-left: 50px;
+  box-sizing: border-box; }
+  尾部样式-- >
+  .footer .service ul > li img {
+    vertical-align: middle; }
+  尾部样式-- >
+  .footer .service ul > li span {
+    margin-left: 25px;
+    font-size: 14px;
+    color: #333; }
+尾部样式-- >
+.footer .footer_main {
+  padding-top: 40px;
+  padding-left: 50px;
+  overflow: hidden; }
+  尾部样式-- >
+  .footer .footer_main div {
+    float: left;
+    margin-right: 120px; }
+    尾部样式-- >
+    .footer .footer_main div p {
+      font-size: 16px;
+      color: black;
+      margin-bottom: 35px; }
+    尾部样式-- >
+    .footer .footer_main div span {
+      display: block;
+      margin-bottom: 15px;
+      color: #808080; }
+    尾部样式-- >
+    .footer .footer_main div img {
+      margin-top: -15px;
+      width: 100px;
+      height: 100px; }
+  尾部样式-- >
+  .footer .footer_main div:last-child {
+    text-align: center;
+    width: 225px;
+    margin: 0;
+    height: 142px;
+    border-left: 2px solid #f2f2f2; }
+尾部样式-- >
+.footer .copyright {
+  text-align: center;
+  padding-top: 65px; }
+  尾部样式-- >
+  .footer .copyright p {
+    margin-bottom: 10px;
+    color: #808080; }
+    尾部样式-- >
+    .footer .copyright p span {
+      margin: 0 12px; }
+
+/*# sourceMappingURL=header.css.map */

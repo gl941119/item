@@ -1,6 +1,8 @@
 $(function(){
 
 
+	$("footer").load("../html/include/footer.html");
+
 	// 手风琴插件
 	$('#demo').zA7n(); 
 
@@ -35,27 +37,34 @@ $(function(){
 	});
 
 
-	let timer = setInterval(move,3000)
+	let timer = setInterval(move,1000)
 
 	function move(){
-		ul.animate({left:next*-liWidth}, 1000,function(){
+
+		ul.animate({left:next*-liWidth}, 500,function(){
 			if (next >= len-1){
 				current = 1;
 				next = 2;
-				ul.css({left:next*-liWidth})
-				console.log(current,next,ul.css("left"),-liWidth)
+				ul.css({left:current * -liWidth})
+				
+				
+			}else{
+				current =next;
+				next++;
 			}
-				if (current <= 0) {
+			if (current <= 0) {
 					current = len - 2;
 					next = len - 1;
 					ul.css({left:(len-2)*-liWidth})
-				}
+				}else{
+				current =next;
+				next++;
+			}
 
 
+		
 			
 		});
-		current =next;
-		next++;
 
 	}
 	// 移进移出停止

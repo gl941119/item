@@ -4,6 +4,8 @@
 	$password = $_GET["password"];
 
 	echo " <meta charset='utf-8'>";
+	
+	
 	/* 向数据库中保存注册的用户信息 */
 	// 连接服务器
 	mysql_connect("localhost:3306", "root", "");
@@ -21,7 +23,7 @@
 
 	// 判断是否注册成功
 	if ($result) {
-		echo "<script>console.log('注册成功');</script>";
+		echo "<script>location='/index.html'</script>";
 	} else {
 		echo "<script>console.log('注册失败');</script>";
 	}

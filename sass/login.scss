@@ -1,0 +1,213 @@
+
+.main{
+	height: 666px;
+	background: #f9f9f9;
+	padding-top: 25px;
+	#form-horizontal{
+		.textLogin{
+			width: 400px;
+			margin:0 auto;
+			
+			.form_title{
+				height: 40px;
+				div:first-child{
+					
+					i{
+						display: inline-block;
+						width: 25px;
+						height: 25px;
+						margin-right: 10px;
+						vertical-align: middle;
+						margin-top: -4px;
+						background: url(../img/jinling.png) no-repeat;
+						  
+						background-position: 0 -521px;
+					}
+					span{
+						font-size: 20px;
+						color:#523669;
+						position: relative;
+						top: 2px;
+
+					}
+				}
+				div:last-child{
+					padding-top: 10px;
+					a{
+						font-size: 14px;
+						color: #808080;
+						margin-left: 10px;
+					}
+				}
+				
+			}
+			.form-group{
+				
+				div{
+
+					margin: 20px auto;
+					float: left;
+					width: 400px;
+					position: relative;
+					input{
+						box-sizing: border-box;
+						width:400px;
+						height: 40px;
+						padding-left: 20px;
+
+					}
+					span{
+						color:red;
+						position: absolute;
+						top: 12px;
+						left: 405px;
+						width: 100px;
+					}
+				}
+				#iphoneCode{
+					width: 240px;
+					float: left;
+				}
+				#iphoneBtn{
+					float:right;
+					width: 140px;
+					height: 40px;
+					background: #724a88;
+					
+					border: 0;
+				}
+				
+				
+				
+				#btn{
+					margin-top: 80px;
+					width: 400px;
+					height: 50px;
+					border: 0;
+					outline: none;
+					background: #f49f26;
+					color: white;
+					font-size: 20px;
+
+				}
+
+				.autoLogin{
+
+				}
+			}
+		}
+		.passwordLogin{
+			width: 400px;
+			margin:0 auto;
+			
+			.form_title{
+				height: 40px;
+				div:first-child{
+					
+					i{
+						display: inline-block;
+						width: 25px;
+						height: 25px;
+						margin-right: 10px;
+						vertical-align: middle;
+						margin-top: -4px;
+						background: url(../img/jinling.png) no-repeat;
+						  
+						background-position: 0 -521px;
+					}
+					span{
+						font-size: 20px;
+						color:#523669;
+						position: relative;
+						top: 2px;
+
+					}
+				}
+				div:last-child{
+					padding-top: 10px;
+					a{
+						font-size: 14px;
+						color: #808080;
+						margin-left: 10px;
+					}
+				}
+				
+			}
+			.form-group{
+				
+				div{
+					margin: 20px auto;
+					float: left;
+					width: 400px;
+					height: 40px;
+					position: relative;
+					input{
+						box-sizing: border-box;
+						width:400px;
+						height: 40px;
+						padding-left: 20px;
+
+					}
+					span{
+						color:red;
+						position: absolute;
+						top: 12px;
+						left: 405px;
+						width: 100px;
+					}
+				}
+				#iphoneCode{
+					width: 240px;
+					float: left;
+				}
+				#iphoneBtn{
+					float:right;
+					width: 140px;
+					height: 40px;
+					background: #724a88;
+					
+					border: 0;
+				}
+				#btn{
+					/*margin-top: 68px;*//*不同*/
+					width: 400px;
+					height: 50px;
+					border: 0;
+					outline: none;
+					background: #f49f26;
+					color: white;
+					font-size: 20px;
+
+				}
+				
+				:nth-child(3){
+					line-height: 40px;	
+					p{
+						input{
+							width: 15px;
+							height: 15px;
+							vertical-align: middle;
+							
+						}
+						label{
+							color: #8a8a8a;
+							margin-left: 5px;
+						}
+						a{
+							/*cursor: pointer;*/
+						}
+					}
+				}
+			}
+		}
+
+
+
+	}
+}
+
+.logo+p{
+	:nth-child(2){
+		cursor: default;
+	}
+}

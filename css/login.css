@@ -1,0 +1,141 @@
+@charset "UTF-8";
+.main {
+  height: 666px;
+  background: #f9f9f9;
+  padding-top: 25px; }
+  .main #form-horizontal .textLogin {
+    width: 400px;
+    margin: 0 auto; }
+    .main #form-horizontal .textLogin .form_title {
+      height: 40px; }
+      .main #form-horizontal .textLogin .form_title div:first-child i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-top: -4px;
+        background: url(../img/jinling.png) no-repeat;
+        background-position: 0 -521px; }
+      .main #form-horizontal .textLogin .form_title div:first-child span {
+        font-size: 20px;
+        color: #523669;
+        position: relative;
+        top: 2px; }
+      .main #form-horizontal .textLogin .form_title div:last-child {
+        padding-top: 10px; }
+        .main #form-horizontal .textLogin .form_title div:last-child a {
+          font-size: 14px;
+          color: #808080;
+          margin-left: 10px; }
+    .main #form-horizontal .textLogin .form-group div {
+      margin: 20px auto;
+      float: left;
+      width: 400px;
+      position: relative; }
+      .main #form-horizontal .textLogin .form-group div input {
+        box-sizing: border-box;
+        width: 400px;
+        height: 40px;
+        padding-left: 20px; }
+      .main #form-horizontal .textLogin .form-group div span {
+        color: red;
+        position: absolute;
+        top: 12px;
+        left: 405px;
+        width: 100px; }
+    .main #form-horizontal .textLogin .form-group #iphoneCode {
+      width: 240px;
+      float: left; }
+    .main #form-horizontal .textLogin .form-group #iphoneBtn {
+      float: right;
+      width: 140px;
+      height: 40px;
+      background: #724a88;
+      border: 0; }
+    .main #form-horizontal .textLogin .form-group #btn {
+      margin-top: 80px;
+      width: 400px;
+      height: 50px;
+      border: 0;
+      outline: none;
+      background: #f49f26;
+      color: white;
+      font-size: 20px; }
+  .main #form-horizontal .passwordLogin {
+    width: 400px;
+    margin: 0 auto; }
+    .main #form-horizontal .passwordLogin .form_title {
+      height: 40px; }
+      .main #form-horizontal .passwordLogin .form_title div:first-child i {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+        margin-top: -4px;
+        background: url(../img/jinling.png) no-repeat;
+        background-position: 0 -521px; }
+      .main #form-horizontal .passwordLogin .form_title div:first-child span {
+        font-size: 20px;
+        color: #523669;
+        position: relative;
+        top: 2px; }
+      .main #form-horizontal .passwordLogin .form_title div:last-child {
+        padding-top: 10px; }
+        .main #form-horizontal .passwordLogin .form_title div:last-child a {
+          font-size: 14px;
+          color: #808080;
+          margin-left: 10px; }
+    .main #form-horizontal .passwordLogin .form-group div {
+      margin: 20px auto;
+      float: left;
+      width: 400px;
+      height: 40px;
+      position: relative; }
+      .main #form-horizontal .passwordLogin .form-group div input {
+        box-sizing: border-box;
+        width: 400px;
+        height: 40px;
+        padding-left: 20px; }
+      .main #form-horizontal .passwordLogin .form-group div span {
+        color: red;
+        position: absolute;
+        top: 12px;
+        left: 405px;
+        width: 100px; }
+    .main #form-horizontal .passwordLogin .form-group #iphoneCode {
+      width: 240px;
+      float: left; }
+    .main #form-horizontal .passwordLogin .form-group #iphoneBtn {
+      float: right;
+      width: 140px;
+      height: 40px;
+      background: #724a88;
+      border: 0; }
+    .main #form-horizontal .passwordLogin .form-group #btn {
+      /*margin-top: 68px;*/
+      /*不同*/
+      width: 400px;
+      height: 50px;
+      border: 0;
+      outline: none;
+      background: #f49f26;
+      color: white;
+      font-size: 20px; }
+    .main #form-horizontal .passwordLogin .form-group :nth-child(3) {
+      line-height: 40px; }
+      .main #form-horizontal .passwordLogin .form-group :nth-child(3) p input {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle; }
+      .main #form-horizontal .passwordLogin .form-group :nth-child(3) p label {
+        color: #8a8a8a;
+        margin-left: 5px; }
+      .main #form-horizontal .passwordLogin .form-group :nth-child(3) p a {
+        /*cursor: pointer;*/ }
+
+.logo + p :nth-child(2) {
+  cursor: default; }
+
+/*# sourceMappingURL=login.css.map */
