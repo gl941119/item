@@ -274,7 +274,7 @@
                 <a href="{{value.all_src}}">查看全部 ></a>
               </div>
               <ul class="tem_content">
-                <li>
+                <li class="product">
                   <a href="javascript:void(0)">
                     <img src="{{value.src}}" alt="">
                     <p>{{value.name}}</p>
@@ -291,7 +291,7 @@
 
       <script id="tem_small" type="text/html">
       {{each list as value}}
-      <li>
+      <li class="product">
         <a href="javascript:void(0)" class="small_tem">
           <img src="{{value.src}}" alt="">
           <dl>
@@ -317,6 +317,7 @@
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="lib/jquery/jquery-3.3.1.js"></script>
     <script src="lib/art-template/template-web.js"></script>
+    <script src="lib/jquery-plugins/jquery.cookie.js"></script>
     <script src="lib/jquery-plugins/limit.js"></script>
    
     <script src="js/shou.js"></script>

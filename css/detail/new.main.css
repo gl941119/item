@@ -421,7 +421,7 @@ body {
     float: left;
     width: 239px;
     height: 98px;
-    background: url(../images/logo.png) 0 center no-repeat
+    background: url(/img/logo.png) 0 center no-repeat
 }
 
 .nav-category {

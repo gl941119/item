@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.g_wrap {
+  width: 1200px !important; }
+
+/*导航样式*/
+.nav_wrap {
+  width: 100%;
+  background: #333333; }
+  .nav_wrap .nav {
+    height: 30px; }
+    .nav_wrap .nav b {
+      width: 1px;
+      height: 11px;
+      background: white;
+      margin: 0 18px;
+      display: inline-block; }
+    .nav_wrap .nav .nav_index, .nav_wrap .nav .nav_user {
+      line-height: 30px; }
+      .nav_wrap .nav .nav_index a, .nav_wrap .nav .nav_user a {
+        color: #ccc; }
+      .nav_wrap .nav .nav_index a:hover, .nav_wrap .nav .nav_user a:hover {
+        color: white; }
+    .nav_wrap .nav .nav_user li {
+      display: inline-block; }
+    .nav_wrap .nav .nav_user li:first-child a:first-child {
+      margin: 0 18px; }
+    .nav_wrap .nav .nav_user li:nth-child(3) {
+      padding-left: 20px;
+      background: url(http://static.biyao.com/pc/common/img/master/msgcenter.png?v=biyao_7dcad45) no-repeat 2px 9px; }
+      .nav_wrap .nav .nav_user li:nth-child(3) a {
+        margin: 0 11px; }
+    .nav_wrap .nav .nav_user li:nth-child(4) {
+      margin-right: 20px;
+      position: relative; }
+      .nav_wrap .nav .nav_user li:nth-child(4) span {
+        color: #ccc;
+        display: inline-block;
+        width: 9px;
+        height: 4px;
+        margin-left: 10px;
+        vertical-align: middle;
+        background: url(http://static1.biyao.com/pc/common/img/master/comSprite.png?v=biyao_d192a16) 0 -102px no-repeat; }
+      .nav_wrap .nav .nav_user li:nth-child(4) .myService {
+        background: white;
+        min-width: 124px;
+        position: absolute;
+        top: 38px;
+        left: 29px;
+        border-radius: 4px;
+        box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.05);
+        display: none; }
+        .nav_wrap .nav .nav_user li:nth-child(4) .myService i {
+          position: absolute;
+          top: -15;
+          left: 37%;
+          z-index: 1;
+          display: block;
+          width: 30px;
+          height: 15px;
+          margin: 0 auto;
+          background: url(http://static3.biyao.com/pc/common/img/master/triangle.png?v=biyao_5912cd0) no-repeat;
+          background-size: 100% 100%; }
+        .nav_wrap .nav .nav_user li:nth-child(4) .myService a {
+          display: block;
+          height: 40px;
+          padding: 0 30px;
+          line-height: 40px;
+          font-size: 16px;
+          color: #333;
+          box-sizing: border-box; }
+    .nav_wrap .nav .nav_user li:last-child {
+      width: 110px;
+      height: 30px;
+      background: #523669; }
+      .nav_wrap .nav .nav_user li:last-child a {
+        display: inline-block;
+        width: 85px;
+        height: 30px;
+        padding-left: 25px;
+        text-align: center;
+        line-height: 30px;
+        background: #523669 url(http://static2.biyao.com/pc/common/img/master/shopCar.png?v=biyao_450e7fc) no-repeat 15px 7px; }
+
+header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto; }
+  header h1 {
+    float: left;
+    margin-top: 20px; }
+    header h1 span {
+      visibility: hidden; }
+  header > div {
+    float: right;
+    height: 100px;
+    box-sizing: border-box;
+    padding-top: 30px; }
+    header > div > div {
+      width: 560px;
+      height: 20px;
+      background: url(/img/cart_course.png) no-repeat -30px -62px; }
+    header > div ul li {
+      width: 140px;
+      float: left;
+      height: 19px;
+      line-height: 19px;
+      color: #666;
+      text-align: center;
+      color: #d5cdda; }
+    header > div ul :nth-child(2) {
+      color: #724a88; }
+
+.address {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .address div:first-child {
+    height: 32px;
+    border-bottom: 1px solid #d5cdda;
+    font-size: 16px;
+    color: #523669; }
+  .address div:last-child {
+    float: left;
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1px solid #bcb8bf;
+    width: 255px;
+    height: 170px;
+    display: inline;
+    padding: 0 12px;
+    position: relative; }
+    .address div:last-child a {
+      display: block;
+      text-align: center; }
+      .address div:last-child a i {
+        width: 52px;
+        height: 52px;
+        background: url(/img/jinling.png) no-repeat;
+        background-position: -218px -109px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 40px;
+        font-style: normal; }
+      .address div:last-child a span {
+        font-size: 18px !important;
+        color: #999 !important;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 15px;
+        font-weight: 400; }
+        .address div:last-child a span em {
+          font-style: normal;
+          font-weight: 400; }
+
+.fapiao {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px 0 20px 0; }
+  .fapiao h4 {
+    height: 32px;
+    border-bottom: 1px solid #d5cdda;
+    font-size: 16px;
+    color: #523669; }
+
+.cart {
+  width: 1200px;
+  margin: 0 auto; }
+  .cart h4 {
+    height: 32px;
+    border-bottom: 1px solid #d5cdda;
+    font-size: 16px;
+    color: #523669; }
+  .cart .cart_title {
+    width: 100%;
+    line-height: 20px; }
+    .cart .cart_title tr :first-child .inline {
+      color: #333; }
+    .cart .cart_title tr :first-child #J_product_name {
+      color: #666; }
+    .cart .cart_title tr th {
+      color: #999;
+      font-size: 12px;
+      font-weight: 400;
+      height: 37px; }
+
+#cart_list {
+  width: 1200px;
+  margin: 0 auto;
+  background: white; }
+  #cart_list table {
+    height: 127px; }
+    #cart_list table tr {
+      border: 1px solid red; }
+      #cart_list table tr img {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #333; }
+      #cart_list table tr #name {
+        color: #333; }
+      #cart_list table tr th[width="35%"] {
+        border-bottom: 1px dotted #ccc;
+        /*display: block;*/ }
+        #cart_list table tr th[width="35%"] div:nth-child(2) {
+          margin-top: 10px; }
+        #cart_list table tr th[width="35%"] .info {
+          color: #523669;
+          margin-bottom: 8px; }
+        #cart_list table tr th[width="35%"] .refund_tips {
+          color: #f90;
+          background: url(http://static.biyao.com/pc/common/img/refundtip.png?v=biyao_03f821e) left 3px no-repeat;
+          text-indent: 17px; }
+
+/*# sourceMappingURL=cart.css.map */

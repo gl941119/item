@@ -85,46 +85,74 @@ $(function(){
 
 
 
-	var templateData = {
-    
-    list: [
-    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
-    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
-    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
-    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"},
-    {title:"光学眼镜",all_src:"#",src:"img/glasses1.jpg",name:"依视路集团旗下企业  制造商直供"}
-    ]
-	};
 
 
-
-
-	var q = template('tem_big', templateData);
+	$.ajax({
+		url: '../mock/templateData.json',
+		type: 'get',
+		dataType: 'json',
+		
+	})
+	.done(function(data) {
+	
+		var q = template('tem_big', data);
 	$(".list").html(q);
+	})
+
+	
+
+	
+
+
+
+	
 
 
 
 
-
-	var produceData = {
-		list:[
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279},
-		{src:"img/glasses2.jpg",name:"钛架半框-开",price:279}
-		]
-	}
-
+	$.ajax({
+		url: '/mock/products.json',
+		type: 'get',
+		dataType: 'json',
+		
+	})
+	.done(function(data) {
+		$(window).data("blah", data);  
+		var w = template('tem_small',data)
+		$(".tem_content").append(w);
+	})
+	
 
 
-	var w = template('tem_small',produceData)
-	$(".tem_content").append(w);
+
+	
 
 
+
+	// 保存productName数据
+	$(".list").delegate('.tem_content li', 'click', function(e) {
+
+		let productName=$(this).find("dt").text()
+		console.log()
+		let data = $(window).data('blah').list
+		let index ;
+		function exist(productName,data){
+			for(let i in data){
+				if(productName === data[i].name){
+					console.log("success")
+					return index = i;
+				}
+			}
+		}
+		index = exist(productName,data)
+		let a = data[index];
+		console.log(a)
+		$.cookie.json=true
+		$.cookie("productName",a);
+
+		window.location = "/html/detail.html"
+		
+	});
 
 	// 吸顶
 	$(window).scroll(function(e) {

@@ -16,7 +16,7 @@
     	</header>
     	<div class="main">
 
-			<form  id="form-horizontal" action="../php/insertUsers.php" method="get">
+			<form  id="form-horizontal" action="/php/insertUsers.php">
 				<div class="form_title">
 					<i></i>
 					<span>新用户注册</span>
@@ -25,6 +25,7 @@
 					<div>
 						<input type="text" id="iphone" name="iphone" placeholder="请输入手机号">
 						<span></span>
+						<p style="position: absolute;font-size: 16px" id="iphoneIsExist"></p>
 					</div>
 					
 					<div>
@@ -68,7 +69,7 @@
 
 
     <script src="/lib/jquery/jquery-3.3.1.js"></script>
-   
+   	<script src="/lib/jquery-plugins/jquery.cookie.js"></script>
     <script src="/js/register.js"></script>
     
   </body>

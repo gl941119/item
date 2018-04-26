@@ -36,6 +36,33 @@ $(function(){
 		
 	// });
 
+	$("#form-horizontal").on('submit', function(event) {
+		event.preventDefault();
+		
+		let iphone = $("#iphone").val(),
+			password = $("#password").val()
+
+		// let rand = {iphone:iphone};
+			
+		// $.cookie("users",JSON.stringify(rand))
+
+		$.ajax({
+			url: '/php/selectUsers.php',
+			type: 'get',
+			dataType: 'json',
+			data: {"iphone": iphone,"password":password},
+		})
+		.done(function(data) {
+			console.log(data);
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+	});
 
 	
 		

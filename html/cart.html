@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="/css/headerAndFooter.css">
+	<link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+	<div class="wrap">
+		
+        <!-- 导航开始 -->
+      <div class="nav_wrap">
+        <div class="nav g_wrap">
+          <ul class="nav_index g-left">
+            <li class="g-left"><a href="javascript:void(0)">首页</a><b></b></li>
+
+            <li class="g-left"><a href="javascript:void(0)">平台政策</a><b></b></li>
+            <li class="g-left"><a href="javascript:void(0)">商家入驻</a></li>
+          </ul>
+
+          <ul class="nav_user g-right">
+            <li>
+              <a href="javascript:void(0)">登录</a>
+              <a href="javascript:void(0)">注册</a>
+              <b></b>
+            </li>
+            
+            <li>
+              <a href="javascript:void(0)">下载必要APP</a>
+              <b></b>
+            </li>
+            
+            <li>
+              <i></i>
+              <a href="javascript:void(0)">消息中心</a>
+              <span class="g_color">0</span>
+               <b></b>
+            </li>
+           
+            <li>
+              <a href="javascript:void(0)">客户服务
+                <span></span>
+              </a>
+               <div class="myService">
+                  
+                  <i></i>
+                  
+                    <a href="#">我的客服</a>
+                  
+                </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                购物车
+                <span>0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <!-- 导航结束 -->
+
+    
+      <!-- 头部结束 -->
+      <header>
+		<h1><a href="/index.html"><img src="/img/logo.png" alt=""><span>必要</span></a></h1>
+		<div>
+			<div></div>
+			<ul class="clearfix car_step_txt">
+					<li>查看购物车</li>
+					<li class="checked">确认订单信息</li>
+					<li>在线付款</li>
+					<li>收货并评价</li>
+			</ul>
+		</div>
+      </header>
+	
+
+	<!-- 	地址 -->
+	<div class="address">
+		<div class="title">
+			确认收货
+		</div>
+		<div>
+			<a >
+				<i ></i>
+				<br>
+				<span class="">使用新地址
+					<em class="upfile_btn"></em>
+				</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="fapiao">
+		<h4 class="nTitle">发票信息</h4>
+
+
+	</div>
+
+
+	<div class="cart">
+		<h4 class="nTitle">确认订单</h4>
+		<table cellspacing="0" cellpadding="0" class="cart_title">
+			<tbody>
+				<tr>
+					<th >
+						 <a>
+						 	<span class="inline">商家：</span> 
+						 	<span id="J_product_name">
+						 		必然眼镜
+						 	</span>
+						</a>
+					</th>
+					<th width="10%" style="display: none">可获积分</th>
+					<th width="12%">单价</th>
+					<th width="12%">数量</th>
+					
+					<th width="12%"><span class="mg_r20">小计</span></th>
+				</tr>
+			</tbody>
+		</table>
+		<div id="cart_list">
+			
+
+		</div>
+	</div>
+		<footer></footer>
+	</div>
+
+	<script type="text/html" id="cart_tem">
+		{{each list as  prod}}
+		<table cellspacing="0" cellpadding="0" style="width: 100%">
+				<tbody>
+					<tr>
+						<th width="5%" align="center">
+							<input type="checkbox" id="chekcbox" / >
+						</th>
+						<th width="18%" align="center">
+							<img id="src" src="/img/glasses2.jpg" alt="">
+						</th>
+						<th width="30%" align="left">
+
+							<div href="" id="name">
+								<a href=""><span>{{prod.name}}</span></a>
+							</div>
+							<div>							镜框:BG4001_C25_亮深枪（小号）
+							<br>
+							镜片:1.56非球面抗蓝防紫双效平光镜片
+							</div>
+
+							<div class="info">
+								<p>定制信息</p>
+							</div>
+							<div class="refund_tips">该商品非质量问题，不支持退换货服务
+							</div>
+
+						</th>
+						<th width="10%">¥<span id="price">{{prod.price}}</span></th>
+						<th width="10%">
+							<span style="font-size: 20px;cursor: pointer;" id="down">-</span>   
+							<span id="amount">{{prod.amount}}</span>  
+							<span style="font-size: 20px;cursor: pointer;" id="up">+</span> 
+						</th>
+						<th width="10%">¥<span id="sub">{{prod.price*prod.amount}}</span></th>
+					</tr>
+				</tbody>
+			</table>
+		{{/each}}
+	</script>
+
+
+	<script src="/lib/jquery/jquery-3.3.1.js"></script>
+	<script src="/lib/jquery-plugins/jquery.cookie.js"></script>
+	<script src="/lib/art-template/template-web.js"></script>
+	<script src="/js/cart.js"></script>
+</body>
+</html>

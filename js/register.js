@@ -8,7 +8,7 @@ $(function(){
 
 	let isSuccess = new Array(3);
 	isSuccess.fill(false);
-	
+	// window.user = "";
 	// 验证手机号
 	$("#iphone").on('blur', function(e) {
 		e.preventDefault();
@@ -19,12 +19,29 @@ $(function(){
 						$("#iphone").css({border:"1px solid red"}).next().text("手机号格式错误")
 						
 					}else{
-						$("#iphone").css({border:"1px solid #799FF8"}).next().text("正确").css({color: '#799FF8'});
-						isSuccess[0] = true;
+						$.ajax({
+							url: '/php/isUsers.php',
+							type: 'get',
+							dataType: 'json',
+							data: {iphone: val},
+						})
+						.done(function(data) {
+							if(data.status === 1){
+								$("#iphone").css({border:"1px solid #799FF8"}).next().text("正确").css({color: '#799FF8'});
+								isSuccess[0] = true;
+							}else if(data.status === 0){
+								$("#iphone").css({border:"1px solid red"}).next().text("手机号码已被注册").css({color: 'red'});
+								isSuccess[0] = false;
+							}
+						})
 					}
 		}else{
 			$("#iphone").css({border:"1px solid red"}).next().text("请输入手机号")
 		}
+
+		
+		
+		
 	});
 
 
@@ -66,7 +83,9 @@ $(function(){
 
 	
 		// e.preventDefault();
-		let	iphone =   $("#iphone").val()
+
+		let	iphone =   $("#iphone").val();
+			
 		if(!iphone){
 			$("#iphone").css({border:"1px solid red"}).next().text("请输入手机号")
 		}
@@ -74,15 +93,14 @@ $(function(){
 			$("#password").css({border:"1px solid red"}).next().text("请输入密码")
 		}
 		let isCheckbox = $("#checkbox").prop("checked")
-		let _isSuccess = isSuccess.everyx(function(a){
+		let _isSuccess = isSuccess.every(function(a){
 							return a == true;   
 							})
 		if(!isCheckbox || !_isSuccess){
 				return false;
 			}
-
-
 		
+
 	
 	});
 
