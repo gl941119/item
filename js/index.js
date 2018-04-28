@@ -37,11 +37,11 @@ $(function(){
 	});
 
 
-	let timer = setInterval(move,1000)
+	let timer = setInterval(move,3000)
 
 	function move(){
 
-		ul.animate({left:next*-liWidth}, 500,function(){
+		ul.animate({left:next*-liWidth}, 1000,function(){
 			if (next >= len-1){
 				current = 1;
 				next = 2;
